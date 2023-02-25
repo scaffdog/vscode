@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "config:js-lib",
+    "group:typescript-eslintMonorepo",
+    "group:commitlintMonorepo",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(chore)",
+    ":semanticCommitScopeDisabled"
+  ],
+  "labels": ["A-dependencies"],
+  "baseBranches": ["main"],
+  "stabilityDays": 3
+}

@@ -1,0 +1,173 @@
+{
+  "name": "scaffdog-vscode",
+  "displayName": "scaffdog",
+  "version": "0.0.1",
+  "description": "Markdown driven scaffolding tool",
+  "categories": [
+    "Snippets",
+    "Other"
+  ],
+  "keywords": [
+    "scaffdog",
+    "scaffold",
+    "scaffolding",
+    "generator",
+    "boilerplate",
+    "markdown",
+    "template"
+  ],
+  "homepage": "https://marketplace.visualstudio.com/items?itemName=wadackel.scaffdog-vscode",
+  "bugs": {
+    "url": "https://github.com/scaffdog/vscode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scaffdog/vscode.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "wadackel"
+  },
+  "publisher": "scaffdog",
+  "main": "./dist/main.js",
+  "scripts": {
+    "vscode:prepublish": "pnpm build:base --minify",
+    "watch": "webpack --watch",
+    "package": "vsce package --no-dependencies",
+    "typecheck": "tsc",
+    "build": "pnpm build:base --sourcemap",
+    "build:base": "esbuild ./src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+    "build:watch": "pnpm build:base --sourcemap --watch",
+    "lint": "run-s lint:*",
+    "lint:prettier": "prettier --check .",
+    "lint:script": "eslint src --ext ts",
+    "format": "run-s format:prettier format:script",
+    "format:prettier": "prettier --write .",
+    "format:script": "pnpm lint:script --fix",
+    "changelog": "changeset add",
+    "release": "vsce publish --no-dependencies",
+    "prepare": "husky install"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "scaffdog.runInSelectedFolder",
+        "title": "Run scaffdog in selected folder",
+        "category": "scaffdog"
+      },
+      {
+        "command": "scaffdog.openOutput",
+        "title": "Open output channel",
+        "category": "scaffdog"
+      }
+    ],
+    "configuration": {
+      "title": "Scaffdog",
+      "type": "object",
+      "properties": {
+        "scaffdog.enable": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Enables and disables the scaffdog extension."
+        },
+        "scaffdog.debug": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Enable debug logging."
+        },
+        "scaffdog.project": {
+          "type": "string",
+          "default": ".scaffdog",
+          "markdownDescription": "The scaffdog project folder to be searched. To specify multiple folders, enter values separated by commas."
+        },
+        "scaffdog.force": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Forces overwriting of existing files without opening a confirmation dialog."
+        }
+      }
+    },
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "scaffdog.runInSelectedFolder",
+          "when": "explorerResourceIsFolder && scaffdog.enabled"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "scaffdog.runInSelectedFolder",
+          "when": "explorerResourceIsFolder && scaffdog.enabled",
+          "group": "navigation@99"
+        }
+      ]
+    }
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "lint-staged": {
+    "*.{js,jsx,cjs,ts,tsx,css,md,yml,json}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "plugins": [
+      "prettier-plugin-packagejson"
+    ],
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "dependencies": {
+    "@scaffdog/engine": "2.5.0",
+    "find-up": "^6.3.0",
+    "globby": "^13.1.3",
+    "plur": "^5.1.0",
+    "resolve": "^1.22.1",
+    "scaffdog": "2.5.0",
+    "semver": "^7.3.8"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.0",
+    "@types/glob": "^8.0.1",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/resolve": "^1.20.2",
+    "@types/semver": "^7.3.13",
+    "@types/vscode": "^1.75.0",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "@vscode/test-electron": "^2.2.2",
+    "@vscode/vsce": "^2.18.0",
+    "esbuild": "^0.17.10",
+    "eslint": "^8.33.0",
+    "glob": "^8.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.1",
+    "mocha": "^10.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.3",
+    "prettier-plugin-packagejson": "^2.4.2",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "packageManager": "pnpm@7.27.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "icon": "assets/icon.png",
+  "galleryBanner": {
+    "color": "#ebebeb",
+    "theme": "light"
+  },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": false,
+      "description": "The extension requires workspace trust because it loads configuration files and code from the workspace and executes it."
+    }
+  }
+}
