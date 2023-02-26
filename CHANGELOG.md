@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.0.5
+
+### Patch Changes
+
+- [`ee5013e`](https://github.com/scaffdog/vscode/commit/ee5013e161a98e7a3aa1c71295886db998bf8ad3) Thanks [@wadackel](https://github.com/wadackel)! - Add license file.
+
 ## 0.0.4
 
 ### Patch Changes
