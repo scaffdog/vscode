@@ -1,7 +1,7 @@
 {
   "name": "scaffdog-vscode",
   "displayName": "scaffdog",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Markdown driven scaffolding tool",
   "categories": [
     "Snippets",
