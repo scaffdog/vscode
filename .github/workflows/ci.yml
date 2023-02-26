@@ -81,3 +81,6 @@ jobs:
         with:
           publish: pnpm release
           commit: 'chore: version packages'
+      - name: Deploy
+        if: steps.changesets.outputs.published == 'true'
+        run: pnpm run deploy

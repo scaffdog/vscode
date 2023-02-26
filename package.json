@@ -46,7 +46,8 @@
     "format:prettier": "prettier --write .",
     "format:script": "pnpm lint:script --fix",
     "changelog": "changeset add",
-    "release": "vsce publish --no-dependencies && changeset publish",
+    "release": "changeset publish",
+    "deploy": "vsce publish --no-dependencies",
     "prepare": "husky install"
   },
   "contributes": {
