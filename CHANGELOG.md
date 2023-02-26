@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.0.8
+
+### Patch Changes
+
+- [`e427597`](https://github.com/scaffdog/vscode/commit/e427597148837c43389436a0317dc911fb47f518) Thanks [@wadackel](https://github.com/wadackel)! - Fix release flow.
+
 ## 0.0.7
 
 ### Patch Changes
