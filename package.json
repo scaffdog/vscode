@@ -29,7 +29,7 @@
     "name": "wadackel"
   },
   "publisher": "scaffdog",
-  "main": "./dist/main.js",
+  "main": "./dist/extension.js",
   "scripts": {
     "vscode:prepublish": "pnpm build:base --minify",
     "watch": "webpack --watch",
