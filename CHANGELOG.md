@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.0.4
+
+### Patch Changes
+
+- [`48de062`](https://github.com/scaffdog/vscode/commit/48de062acbd66d44504e0713323dc86f0d7ed23a) Thanks [@wadackel](https://github.com/wadackel)! - Fix Extension entrypoint.
+
 ## 0.0.3
 
 ### Patch Changes
