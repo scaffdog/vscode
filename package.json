@@ -2,6 +2,7 @@
   "name": "scaffdog-vscode",
   "displayName": "scaffdog",
   "version": "0.0.4",
+  "private": true,
   "description": "Markdown driven scaffolding tool",
   "categories": [
     "Snippets",
@@ -16,7 +17,7 @@
     "markdown",
     "template"
   ],
-  "homepage": "https://marketplace.visualstudio.com/items?itemName=wadackel.scaffdog-vscode",
+  "homepage": "https://marketplace.visualstudio.com/items?itemName=scaffdog.scaffdog-vscode",
   "bugs": {
     "url": "https://github.com/scaffdog/vscode/issues"
   },
@@ -45,7 +46,7 @@
     "format:prettier": "prettier --write .",
     "format:script": "pnpm lint:script --fix",
     "changelog": "changeset add",
-    "release": "vsce publish --no-dependencies",
+    "release": "vsce publish --no-dependencies && changeset publish",
     "prepare": "husky install"
   },
   "contributes": {
