@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.0.3
+
+### Patch Changes
+
+- [`89ad8e0`](https://github.com/scaffdog/vscode/commit/89ad8e0309a2ce48443b97067a081b970553d0d2) Thanks [@wadackel](https://github.com/wadackel)! - Fix dependencies.
+
 ## 0.0.2
 
 ### Patch Changes
