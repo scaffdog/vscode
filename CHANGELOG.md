@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.0.7
+
+### Patch Changes
+
+- [`dad4631`](https://github.com/scaffdog/vscode/commit/dad46317c8830b163395128a795351360f0a29a3) Thanks [@wadackel](https://github.com/wadackel)! - Tweak release flow.
+
 ## 0.0.6
 
 ### Patch Changes
