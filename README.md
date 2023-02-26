@@ -1,4 +1,4 @@
-# VS Code scaffdog extension [![CI](https://github.com/scaffdog/vscode/actions/workflows/ci.yml/badge.svg)](https://github.com/scaffdog/vscode/actions/workflows/ci.yml)
+# VS Code scaffdog extension [![CI](https://github.com/scaffdog/vscode/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/scaffdog/vscode/actions/workflows/ci.yml)
 
 ![DEMO](./assets/demo.gif)
 
