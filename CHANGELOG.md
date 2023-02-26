@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.0.6
+
+### Patch Changes
+
+- [`2af1a90`](https://github.com/scaffdog/vscode/commit/2af1a90ee452f4164f8f142d51c20a2c825942fa) Thanks [@wadackel](https://github.com/wadackel)! - Tweak release flow.
+
 ## 0.0.5
 
 ### Patch Changes
