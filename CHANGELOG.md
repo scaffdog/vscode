@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.0.2
+
+### Patch Changes
+
+- [`6d00bad`](https://github.com/scaffdog/vscode/commit/6d00bad7373937cbc9cb4cc867593d27aa329d76) Thanks [@wadackel](https://github.com/wadackel)! - Tweak CI/CD pipeline.
+
 ## 0.0.1
 
 ### Patch Changes
