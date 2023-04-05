@@ -145,7 +145,7 @@
     "@vscode/vsce": "2.18.0",
     "esbuild": "0.17.10",
     "eslint": "8.34.0",
-    "glob": "8.1.0",
+    "glob": "9.3.4",
     "husky": "8.0.3",
     "lint-staged": "13.1.2",
     "mocha": "10.2.0",
