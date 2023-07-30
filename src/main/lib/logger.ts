@@ -22,6 +22,7 @@ export type Logger = {
   warn: LogFn;
   error: LogFn;
   setLevel: (level: LogLevel) => void;
+  getLevel: () => LogLevel;
   show: () => void;
 };
 
@@ -95,6 +96,10 @@ export const createLogger = (): Logger => {
     setLevel: (next) => {
       level.name = next;
       level.value = getLevelValue(next);
+    },
+
+    getLevel: () => {
+      return level.name;
     },
 
     show: () => {

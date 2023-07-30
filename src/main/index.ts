@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import { createScaffdogAdapter } from './adapter';
 import { getConfig } from './config';
 import { createLogger } from './lib/logger';
 import { createModuleLibrary } from './lib/module';
@@ -32,11 +33,10 @@ export const activate = async (context: vscode.ExtensionContext) => {
   }
 
   // initialize
-  vscode.commands.executeCommand('setContext', 'scaffdog.enabled', true);
-
   const mod = createModuleLibrary(logger);
   const prompt = createPromptLibrary(logger);
-  const scaffdog = createScaffdogLibrary(logger, mod, prompt);
+  const adapter = createScaffdogAdapter(logger, prompt);
+  const scaffdog = createScaffdogLibrary(logger, mod, prompt, adapter);
 
   const disposables = [
     vscode.commands.registerCommand('scaffdog.openOutput', () => {
@@ -46,8 +46,10 @@ export const activate = async (context: vscode.ExtensionContext) => {
       'scaffdog.runInSelectedFolder',
       scaffdog.runInSelectedFolder,
     ),
-    ...scaffdog.register(root),
+    ...(await scaffdog.register(root)),
   ];
+
+  vscode.commands.executeCommand('setContext', 'scaffdog.enabled', true);
 
   context.subscriptions.push(...disposables);
 };
