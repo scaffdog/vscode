@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.1.0
+
+### Minor Changes
+
+- [#27](https://github.com/scaffdog/vscode/pull/27) [`374dc87`](https://github.com/scaffdog/vscode/commit/374dc87c2f520ef8c32feaecaa2945204450161e) Thanks [@wadackel](https://github.com/wadackel)! - Support for scaffdog v3 has been added.
+
+  scaffdog v3 is migrating to Native ESM. This version includes changes for both ESM and CommonJS.
+  Please feel free to update to work with both v2 and v3.
+
+  ref: https://github.com/prettier/prettier-vscode/pull/3016
+
 ## 0.0.8
 
 ### Patch Changes
