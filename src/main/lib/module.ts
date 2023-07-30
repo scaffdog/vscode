@@ -4,31 +4,17 @@ import * as path from 'node:path';
 import * as resolve from 'resolve';
 import { Logger } from './logger';
 
-/* eslint-disable */
-declare const __webpack_require__: typeof require;
-declare const __non_webpack_require__: typeof require;
-const getRequire = () =>
-  typeof __webpack_require__ === 'function' ? __non_webpack_require__ : require;
-/* eslint-enable */
-
 export type ModuleLibrary = {
   clear: () => void;
-  loadModule: <T>(m: string) => T | null;
   findPackage: (root: string, pkg: string) => string | null;
 };
 
 export const createModuleLibrary = (logger: Logger): ModuleLibrary => {
-  const require = getRequire();
   const cache = new Map<string, string>();
 
   return {
-    loadModule: (m) => {
-      try {
-        return require(m);
-      } catch (e) {
-        logger.debug(`Module load error ("${(e as Error).message}")`);
-        return null;
-      }
+    clear: () => {
+      cache.clear();
     },
 
     findPackage: (root, pkg) => {
@@ -79,10 +65,6 @@ export const createModuleLibrary = (logger: Logger): ModuleLibrary => {
         logger.error('Find package error', e);
         return null;
       }
-    },
-
-    clear: () => {
-      cache.clear();
     },
   };
 };
