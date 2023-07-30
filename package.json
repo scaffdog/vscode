@@ -150,7 +150,7 @@
     "@typescript-eslint/parser": "5.53.0",
     "@vscode/test-electron": "2.3.3",
     "@vscode/vsce": "2.19.0",
-    "esbuild": "0.18.15",
+    "esbuild": "0.18.17",
     "eslint": "8.45.0",
     "glob": "8.1.0",
     "husky": "8.0.3",
