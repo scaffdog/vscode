@@ -163,7 +163,7 @@
     "ts-loader": "9.4.2",
     "typescript": "5.1.6"
   },
-  "packageManager": "pnpm@7.33.5",
+  "packageManager": "pnpm@8.6.10",
   "engines": {
     "vscode": "^1.60.0"
   },
