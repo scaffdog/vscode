@@ -160,7 +160,7 @@
     "prettier": "2.8.8",
     "prettier-plugin-packagejson": "2.4.5",
     "rimraf": "5.0.1",
-    "ts-loader": "9.4.2",
+    "ts-loader": "9.5.1",
     "typescript": "5.1.6"
   },
   "packageManager": "pnpm@8.6.11",
