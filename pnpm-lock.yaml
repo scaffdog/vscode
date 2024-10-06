@@ -53,8 +53,8 @@ devDependencies:
     specifier: 7.5.0
     version: 7.5.0
   '@types/vscode':
-    specifier: 1.60.0
-    version: 1.60.0
+    specifier: 1.94.0
+    version: 1.94.0
   '@typescript-eslint/eslint-plugin':
     specifier: 6.2.1
     version: 6.2.1(@typescript-eslint/parser@6.2.1)(eslint@8.46.0)(typescript@5.1.6)
@@ -897,8 +897,8 @@ packages:
     resolution: {integrity: sha512-MFETx3tbTjE7Uk6vvnWINA/1iJ7LuMdO4fcq8UfF0pRbj01aGLduVvQcRyswuACJdpnHgg8E3rQLhaRdNEJS0w==}
     dev: false
 
-  /@types/vscode@1.60.0:
-    resolution: {integrity: sha512-wZt3VTmzYrgZ0l/3QmEbCq4KAJ71K3/hmMQ/nfpv84oH8e81KKwPEoQ5v8dNCxfHFVJ1JabHKmCvqdYOoVm1Ow==}
+  /@types/vscode@1.94.0:
+    resolution: {integrity: sha512-UyQOIUT0pb14XSqJskYnRwD2aG0QrPVefIfrW1djR+/J4KeFQ0i1+hjZoaAmeNf3Z2jleK+R2hv+EboG/m8ruw==}
     dev: true
 
   /@typescript-eslint/eslint-plugin@6.2.1(@typescript-eslint/parser@6.2.1)(eslint@8.46.0)(typescript@5.1.6):
