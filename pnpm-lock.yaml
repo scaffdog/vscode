@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@scaffdog/engine':
-    specifier: 3.0.0-canary.1
-    version: 3.0.0-canary.1
+    specifier: 3.0.0
+    version: 3.0.0
   find-up:
     specifier: ^6.3.0
     version: 6.3.0
@@ -21,8 +21,8 @@ dependencies:
     specifier: ^1.22.2
     version: 1.22.2
   scaffdog:
-    specifier: 3.0.0-canary.1
-    version: 3.0.0-canary.1
+    specifier: 3.0.0
+    version: 3.0.0
   semver:
     specifier: ^7.5.4
     version: 7.5.4
@@ -733,19 +733,19 @@ packages:
       config-chain: 1.1.13
     dev: false
 
-  /@scaffdog/config@3.0.0-canary.1:
-    resolution: {integrity: sha512-MHr2fvv81K76BUkLl2iGaxCwU/JGjS2+rEX+BsN3Yo0DToXuLgmiWvqs+WqNHufXruRoak1X5adNvfZS5nUYRg==}
+  /@scaffdog/config@3.0.0:
+    resolution: {integrity: sha512-ODrhB7MzZulO5FY7Y4SWGVzQR+yKCO93KnwRGlbywX/6eV19wQdPFuU6Y0dlVhDIGpPDJI8Yo+i+ZxvSOBlr2g==}
     dependencies:
-      '@scaffdog/types': 3.0.0-canary.1
+      '@scaffdog/types': 3.0.0
       jiti: 1.17.1
       zod: 3.21.4
     dev: false
 
-  /@scaffdog/core@3.0.0-canary.1:
-    resolution: {integrity: sha512-YUfrgQS4iCY0j/timIjr1gzvIVVyWyPNJP36iTut3BDnzaTL+clM0mlCQmfZS4wK4LrOYuDWz/aKhYwPRcJQvQ==}
+  /@scaffdog/core@3.0.0:
+    resolution: {integrity: sha512-lZ+6LPdP54W/xW2zLPfbmLV/eeNgCaN67Clzbm+n6CS9BBTHK5GQ/vPD7rhJ+PH+FY00f1pZDtUfmIfZ5aB0Zw==}
     dependencies:
-      '@scaffdog/engine': 3.0.0-canary.1
-      '@scaffdog/types': 3.0.0-canary.1
+      '@scaffdog/engine': 3.0.0
+      '@scaffdog/types': 3.0.0
       mdast-util-to-string: 4.0.0
       remark-parse: 10.0.2
       unified: 10.1.2
@@ -754,29 +754,29 @@ packages:
       - supports-color
     dev: false
 
-  /@scaffdog/engine@3.0.0-canary.1:
-    resolution: {integrity: sha512-BdFQQvd+v0Yy7Ut8Hh0RU5N9c1lF6bJBcNHJtOTc/kSvmg8WDi5qWUMrw7ASaEbBqmNyo7GImYx1CsI9uavYFw==}
+  /@scaffdog/engine@3.0.0:
+    resolution: {integrity: sha512-xJ8TNFjNe28DdYtfW6UmnBV6k27qM7vVf2wZd09I131Gv5ZjUbnrA3bQZYn2dwXztYmcnxvT1538kA02cA1xhA==}
     dependencies:
-      '@scaffdog/error': 3.0.0-canary.1
-      '@scaffdog/types': 3.0.0-canary.1
+      '@scaffdog/error': 3.0.0
+      '@scaffdog/types': 3.0.0
       change-case: 4.1.2
       dayjs: 1.11.7
       is-plain-obj: 4.1.0
       plur: 5.1.0
     dev: false
 
-  /@scaffdog/error@3.0.0-canary.1:
-    resolution: {integrity: sha512-WzHSWxUQoMVNiPb2MnHk1I8BZ+3G+VQSseWOmHAHmC4K0QGZ4XsvNFuId53WG5kMQuSPbdlgED2ND/vNKj0UgA==}
+  /@scaffdog/error@3.0.0:
+    resolution: {integrity: sha512-M/AdXI5p/hzz02Tn7mTVNVPCjbbK/J1I7pVYV72kIUGV6m1C6xq70p8cn7lY/qi726S5eOvYEv8wuR7ExJP+wQ==}
     dependencies:
-      '@scaffdog/types': 3.0.0-canary.1
+      '@scaffdog/types': 3.0.0
       chalk: 5.3.0
       string-length: 6.0.0
     dev: false
 
-  /@scaffdog/types@3.0.0-canary.1:
-    resolution: {integrity: sha512-7OyZu+KUgeN+0ZJVpOuzWBURselGQ3X2fP49o4kAKMmcR+MWKfMUCzEruOQNanx9uLkrvJ2z1Gx4FkR28B/9iw==}
+  /@scaffdog/types@3.0.0:
+    resolution: {integrity: sha512-XRECzkYKBl3nD7erkj9TipcDue7+gG9LnfrIs14eLToeMOsCsASHGgUMDw/b2yKsyKdHDU2T6hJfQRb1Cew7WQ==}
     dependencies:
-      type-fest: 3.13.0
+      type-fest: 3.13.1
     dev: false
 
   /@sindresorhus/is@5.5.2:
@@ -1190,6 +1190,7 @@ packages:
 
   /acorn-import-assertions@1.9.0(acorn@8.10.0):
     resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
+    deprecated: package has been renamed to acorn-import-attributes
     peerDependencies:
       acorn: ^8
     dependencies:
@@ -1405,7 +1406,7 @@ packages:
     dependencies:
       buffer: 5.7.1
       inherits: 2.0.4
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
 
   /boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
@@ -4730,15 +4731,6 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /readable-stream@3.6.0:
-    resolution: {integrity: sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==}
-    engines: {node: '>= 6'}
-    requiresBuild: true
-    dependencies:
-      inherits: 2.0.4
-      string_decoder: 1.1.1
-      util-deprecate: 1.0.2
-
   /readable-stream@3.6.2:
     resolution: {integrity: sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==}
     engines: {node: '>= 6'}
@@ -4747,8 +4739,6 @@ packages:
       inherits: 2.0.4
       string_decoder: 1.3.0
       util-deprecate: 1.0.2
-    dev: true
-    optional: true
 
   /readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
@@ -4924,10 +4914,10 @@ packages:
 
   /safe-buffer@5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
+    dev: true
 
   /safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
-    dev: true
 
   /safe-regex-test@1.0.0:
     resolution: {integrity: sha512-JBUUzyOgEwXQY1NuPtvcj/qcBDbDmEvWufhlnXZIm75DEHp+afM1r1ujJpJsV/gSM4t59tpDyPi1sd6ZaPFfsA==}
@@ -4944,15 +4934,15 @@ packages:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
     dev: true
 
-  /scaffdog@3.0.0-canary.1:
-    resolution: {integrity: sha512-/0BMkhKAHa++uUn8rFIHqAbtMd2e0h/z/ynjCuLym2k1h0njD7fpi3H3rd+EMAPNSn0zD5gPNYVGAwkj6pl/zQ==}
+  /scaffdog@3.0.0:
+    resolution: {integrity: sha512-XoqQ8tOxM+dMIi0IlZCXeblkbG9PNSCpR/WM5BNPTKxb7TIP/eB+WCqQwYmhgzSZ2F2oHl86o0h9EDrh08LUuQ==}
     hasBin: true
     dependencies:
-      '@scaffdog/config': 3.0.0-canary.1
-      '@scaffdog/core': 3.0.0-canary.1
-      '@scaffdog/engine': 3.0.0-canary.1
-      '@scaffdog/error': 3.0.0-canary.1
-      '@scaffdog/types': 3.0.0-canary.1
+      '@scaffdog/config': 3.0.0
+      '@scaffdog/core': 3.0.0
+      '@scaffdog/engine': 3.0.0
+      '@scaffdog/error': 3.0.0
+      '@scaffdog/types': 3.0.0
       ansi-escapes: 6.2.0
       chalk: 5.3.0
       cli-truncate: 3.1.0
@@ -5284,14 +5274,13 @@ packages:
     resolution: {integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==}
     dependencies:
       safe-buffer: 5.1.2
+    dev: true
 
   /string_decoder@1.3.0:
     resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
     requiresBuild: true
     dependencies:
       safe-buffer: 5.2.1
-    dev: true
-    optional: true
 
   /strip-ansi@6.0.1:
     resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
@@ -5584,6 +5573,11 @@ packages:
 
   /type-fest@3.13.0:
     resolution: {integrity: sha512-Gur3yQGM9qiLNs0KPP7LPgeRbio2QTt4xXouobMCarR0/wyW3F+F/+OWwshg3NG0Adon7uQfSZBpB46NfhoF1A==}
+    engines: {node: '>=14.16'}
+    dev: false
+
+  /type-fest@3.13.1:
+    resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
     engines: {node: '>=14.16'}
     dev: false
 
